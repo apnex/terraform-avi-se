@@ -1,9 +1,8 @@
 ### vsphere variables
 variable "datacenter" {}
-variable "cluster" {}
 variable "datastore" {}
+variable "resourcepool" {}
 variable "host" {}
-variable "dvs" {}
 variable "network-mgmt" {}
 variable "network-data" {}
 

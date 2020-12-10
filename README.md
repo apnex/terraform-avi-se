@@ -1,7 +1,14 @@
 ## `terraform-avi-se'
-Terraform module for AVI Service Engine depoyment on VMware Cloud on AWS (VMC)
+Terraform module for AVI Service Engine depoyment on VMware Cloud on AWS (VMC)  
 Create a new directory containing the following `main.tf` file  
 Adjust parameters as required  
+
+#### `terraform.tfvars`
+```
+vsphere_user     = "cloudadmin@vmc.local"
+vsphere_password = "cloudadmin-password"
+vsphere_server   = "vcenter.x.x.x.x.vmwarevmc.com"
+```
 
 #### `main.tf`
 ```
