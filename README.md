@@ -1,6 +1,6 @@
 ## `terraform-avi-se'
 Terraform module for AVI Service Engine depoyment on VMware Cloud on AWS (VMC)  
-Create a new directory containing the following `main.tf` file  
+Create a new directory containing the following `main.tf` and `terraform.tfvars` files  
 Adjust parameters as required  
 
 #### `terraform.tfvars`

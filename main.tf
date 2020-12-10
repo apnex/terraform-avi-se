@@ -28,13 +28,18 @@ data "vsphere_network" "se-data" {
 }
 
 resource "vsphere_virtual_machine" "avi-se" {
-	name             = var.se-hostname
-	resource_pool_id = data.vsphere_resource_pool.pool.id
-	datastore_id     = data.vsphere_datastore.datastore.id
-	datacenter_id    = data.vsphere_datacenter.datacenter.id
-	host_system_id   = data.vsphere_host.host.id
-	wait_for_guest_net_timeout = 0
-	wait_for_guest_ip_timeout  = 0
+	name				= var.se-hostname
+	resource_pool_id		= data.vsphere_resource_pool.pool.id
+	datastore_id			= data.vsphere_datastore.datastore.id
+	datacenter_id			= data.vsphere_datacenter.datacenter.id
+	host_system_id			= data.vsphere_host.host.id
+	wait_for_guest_net_timeout	= 0
+	wait_for_guest_ip_timeout	= 0
+
+	## se resources
+	num_cores_per_socket		= 2
+	num_cpus			= 2
+
  
 	ovf_deploy {
 		#local_ovf_path		= var.local_ovf_path
