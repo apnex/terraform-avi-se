@@ -12,6 +12,9 @@ vsphere_server   = "vcenter.x.x.x.x.vmwarevmc.com"
 
 #### `main.tf`
 ```
+variable "vsphere_user" {}
+variable "vsphere_password" {}
+variable "vsphere_server" {}
 terraform {
 	required_providers {
 		vsphere = "= 1.23.0"
